@@ -30,6 +30,6 @@ steps:
 
 - task: AzureRmWebAppDeployment@3
   inputs:
-    azureSubscription: 'EDCA-NonProd'
+    azureSubscription: "EDCA-NonProd"
     WebAppName: 'pipelines-java'
     Package: '$(System.DefaultWorkingDirectory)/**/*.war'
