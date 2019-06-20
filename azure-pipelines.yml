@@ -28,10 +28,3 @@ steps:
     reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/jacoco"
     failIfCoverageEmpty: true
 
-- task: AzureRmWebAppDeployment@4
-  displayName: 'Deploy War to Azure App Service'
-  inputs:
-    azureSubscription: '$(Parameters.ConnectedServiceName)'
-    appType: 'WebApp'
-    WebAppName: '$(Parameters.WebAppName)'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.war'
